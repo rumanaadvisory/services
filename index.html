@@ -111,6 +111,20 @@
     background: var(--teal);
     opacity: 0.6;
   }
+  
+  .pedigree-mobile {
+  display: none;
+  }
+
+@media (max-width: 768px) {
+  .pedigree-desktop {
+    display: none !important;
+  }
+  
+  .pedigree-mobile {
+    display: flex;
+  }
+}
 
   /* ── MAIN ── */
   main {
@@ -580,20 +594,30 @@
   <div class="header-inner">
     <div class="eyebrow">Fractional COO Services</div>
     <h1>Rumana Hussain</h1>
-    <div class="pedigree">
-      <span class="pedigree-item">Stanford Health Care</span>
-      <span class="pedigree-dot"></span>
-      <span class="pedigree-item">Blue Shield of California</span>
-      <span class="pedigree-dot"></span>
-      <span class="pedigree-item">Alameda Health System</span>
-      <span class="pedigree-dot"></span>
-      <span class="pedigree-item">Sparrow Healthcare</span>
-    </div>
-    <div class="pedigree" style="margin-top: 8px;">
-      <span class="pedigree-item">MBA/MPH, UC Berkeley</span>
-      <span class="pedigree-dot"></span>
-      <span class="pedigree-item">BS Computer Science, Washington University in St. Louis</span>
-    </div>
+   <!-- Desktop pedigree - shown on screens 769px+ -->
+<div class="pedigree pedigree-desktop">
+  <span class="pedigree-item">Stanford Health Care</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">Blue Shield of California</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">Alameda Health System</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">Sparrow Healthcare</span>
+</div>
+<div class="pedigree pedigree-desktop" style="margin-top: 8px;">
+  <span class="pedigree-item">MBA/MPH, UC Berkeley</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">BS Computer Science, Washington University in St. Louis</span>
+</div>
+
+<!-- Mobile pedigree - shown on screens 768px and below -->
+<div class="pedigree pedigree-mobile">
+  <span class="pedigree-item">Stanford</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">Blue Shield</span>
+  <span class="pedigree-dot"></span>
+  <span class="pedigree-item">MBA/MPH, UC Berkeley</span>
+</div>
   </div>
 </header>
 
